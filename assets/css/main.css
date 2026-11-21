@@ -84,9 +84,38 @@ a:hover {
 }
 
 .header .logo .sitename {
-  font-size: 20px;
-  line-height: 1.05;
-  max-width: 220px;
+  font-size: 18px;
+  line-height: 1;
+  max-width: 330px;
+  white-space: nowrap;
+  text-transform: none;
+  letter-spacing: 0.1px;
+  font-weight: 800;
+}
+
+.header .logo .sitename span {
+  display: inline;
+  margin-top: 0;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+body,
+.main,
+.container,
+.container-fluid,
+img {
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  height: auto;
 }
 
 h1,
@@ -263,7 +292,8 @@ h6 {
 .header .btn-getstarted:focus {
   color: #06071a;
   background: #d4a017;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 700;
   padding: 8px 25px;
   margin: 0 0 0 30px;
   border-radius: 50px;
@@ -321,9 +351,9 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 17px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2216,6 +2246,242 @@ section,
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
+}
+
+.enrollment-process .enrollment-step {
+  height: 100%;
+  position: relative;
+  padding: 30px 24px 24px;
+  text-align: center;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--heading-color), transparent 88%);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--heading-color), transparent 94%);
+}
+
+.enrollment-process .step-number {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  color: color-mix(in srgb, var(--heading-color), transparent 70%);
+  font-family: var(--heading-font);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.enrollment-process .enrollment-step i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  color: var(--accent-color);
+  font-size: 24px;
+}
+
+.enrollment-process .enrollment-step h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.enrollment-process .enrollment-step p {
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  font-size: 14px;
+}
+
+.admission-checklist {
+  padding: 30px;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--heading-color), transparent 88%);
+  border-radius: 10px;
+}
+
+.admission-checklist h3 {
+  padding-bottom: 16px;
+  border-bottom: 1px solid color-mix(in srgb, var(--heading-color), transparent 88%);
+  font-size: 24px;
+}
+
+.admission-checklist ul {
+  list-style: none;
+  padding: 10px 0 0;
+  margin: 0;
+}
+
+.admission-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+}
+
+.admission-checklist li i {
+  color: var(--accent-color);
+}
+
+.admission-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 36px;
+  color: #fff;
+  background: #0b1230;
+  border-radius: 10px;
+}
+
+.admission-cta .eyebrow {
+  margin-bottom: 10px;
+  color: #d4a017;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.admission-cta h3 {
+  color: #fff;
+  font-size: 28px;
+}
+
+.admission-cta p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.admission-cta .btn-admissions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 12px 18px;
+  color: #0b1230;
+  background: #d4a017;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.admission-cta .btn-admissions:hover {
+  color: #0b1230;
+  background: #e5b72c;
+}
+
+@media (max-width: 1199px) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .header .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .header .logo img {
+    max-height: 32px;
+    margin-right: 6px;
+  }
+
+  .header .logo .sitename {
+    max-width: 230px;
+    font-size: 14px;
+  }
+
+  .header .btn-getstarted {
+    margin-left: 8px;
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+
+  .navmenu ul {
+    inset: 56px 12px 12px 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .logo .sitename {
+    max-width: 205px;
+    font-size: 12px;
+  }
+
+  .header .logo img {
+    max-height: 28px;
+  }
+
+  .header .btn-getstarted {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    margin-right: 0;
+  }
+
+  .page-title .heading h1,
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .courses .course-item,
+  .pricing .pricing-item,
+  .enrollment-process .enrollment-step,
+  .admission-checklist,
+  .admission-cta {
+    width: 100%;
+  }
+
+  .courses .course-content h3 {
+    font-size: 18px;
+  }
+
+  .admission-checklist {
+    padding: 22px 18px;
+  }
+
+  .admission-checklist h3 {
+    font-size: 20px;
+  }
+
+  .admission-checklist li {
+    align-items: flex-start;
+  }
+
+  .admission-cta {
+    padding: 28px 22px;
+  }
+
+  .footer .footer-top,
+  .footer .copyright {
+    text-align: center;
+  }
+}
+
+@media (max-width: 390px) {
+  .header .logo .sitename {
+    max-width: 170px;
+    font-size: 10.5px;
+  }
+
+  .header .logo img {
+    max-height: 26px;
+  }
+
+  .page-title .heading h1,
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .pricing .btn-buy {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 /*--------------------------------------------------------------
