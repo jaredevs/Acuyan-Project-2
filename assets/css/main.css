@@ -1302,7 +1302,8 @@ section,
 /*--------------------------------------------------------------
 # About Us Section
 --------------------------------------------------------------*/
-.about-us .content h3 {
+.about-us .content h3,
+.vision .content h3 {
   font-size: 2rem;
   font-weight: 700;
 }
@@ -1322,12 +1323,18 @@ section,
   color: var(--accent-color);
 }
 
-.about-us .content p:last-child {
+.about-us .content p:last-child,
+.vision .content p:last-child {
   margin-bottom: 0;
 }
 
+.vision .img-fluid {
+  max-width: 360px;
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
-# Testimonials Section
+# Vision Section
 --------------------------------------------------------------*/
 .testimonials .testimonial-wrap {
   padding-left: 50px;
